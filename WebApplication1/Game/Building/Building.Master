@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Building.master.cs" Inherits="WebApplication1.Building" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <script type="text/javascript" src="http://www.francescomalagrino.com/BootstrapPageGenerator/3/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="http://www.francescomalagrino.com/BootstrapPageGenerator/3/js/jquery-ui"></script>
+    <link href="http://www.francescomalagrino.com/BootstrapPageGenerator/3/css/bootstrap-combined.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="http://www.francescomalagrino.com/BootstrapPageGenerator/3/js/bootstrap.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class="container-fluid">
+	            <div class="row-fluid">
+		            <div class="span12">
+			            <h3 class="text-center">
+				            我家里有矿
+			            </h3>
+			            <ul class="nav nav-tabs">
+				            <li>
+					            <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="../Resource/ResourceAl.aspx">矿物</asp:LinkButton>
+				            </li>
+				            <li class="active">
+					            <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="BuildingAl.aspx">矿场</asp:LinkButton>
+				            </li>
+				            <li>
+					            <asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="../../Trading/Trading_hall.aspx">交易所</asp:LinkButton>
+				            </li>
+			            </ul>
+                    </div>
+                  </div>
+               </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

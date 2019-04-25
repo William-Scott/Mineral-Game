@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Signup_Site.master.cs" Inherits="WebApplication1.Signup_Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <script type="text/javascript" src="http://www.francescomalagrino.com/BootstrapPageGenerator/3/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="http://www.francescomalagrino.com/BootstrapPageGenerator/3/js/jquery-ui"></script>
+    <link href="http://www.francescomalagrino.com/BootstrapPageGenerator/3/css/bootstrap-combined.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="http://www.francescomalagrino.com/BootstrapPageGenerator/3/js/bootstrap.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class="container-fluid">
+	            <div class="row-fluid">
+		            <div class="span12">
+			            <h3 class="text-center">
+				            我家里有矿
+			            </h3>
+			            <ul class="nav nav-tabs">
+				            <li>
+					            <a href="signin.aspx">登录</a>
+				            </li>
+				            <li class="active">
+					            <a href="signup.aspx">注册</a>
+				            </li>
+			            </ul>
+                    </div>
+                 </div>
+               </div>
+            <asp:ContentPlaceHolder ID="signup" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
