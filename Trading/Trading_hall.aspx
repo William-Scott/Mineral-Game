@@ -20,6 +20,9 @@
                         <h3 class="text-center">
 				            我家里有矿
 			            </h3>
+                        <div class="text-center">
+                            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                        </div>
                         <ul class="nav nav-tabs">
 				            <li>
 					            <a href="../Game/Resource/ResourceAl.aspx">矿物</a>
