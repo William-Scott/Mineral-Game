@@ -36,13 +36,13 @@
 			<h3>
 				铬矿场
 			</h3>
-			<p><em>铬矿场可以自动生产铬矿，建造需求：铝矿 * 500，铁矿*100，铬矿*50，镍矿*50，铜矿*50</em></p>
+			<p><em>铬矿场可以自动生产铬矿，建造需求：铝矿 * 500，铁矿*100，铅矿*50，镍矿*50，铜矿*50</em></p>
             <br/>
             <br/><p id ="num1">你目前拥有0个铬矿场</p><br/>
 			<p id="num2">你目前20每秒生产0个铬矿</p> 
             <button id = "click" class="btn" type="button" onclick ="produce_cr_b()">点击建造铬矿场</button>
             <p><br/><br/></p>
-            <p id="warcrng"></p>
+            <p id="warning"></p>
 		</div>
 	</div>
 </div>
@@ -68,6 +68,12 @@
     cr_r.num = getCookie("cr_r_num");
 
     cr_b.num = getCookie("cr_b_num");
+
+    var al_r_num_ = 0;
+    var fe_r_num_ = 0;
+    var ni_r_num_ = 0;
+    var cu_r_num_ = 0;
+    var pb_r_num_ = 0;
     document.getElementById("num1").innerHTML = "你目前拥有" + cr_b.num + "个铬矿场";
     document.getElementById("num2").innerHTML = "你目前20每秒生产" + cr_b.num + "个铬矿";
         /*funccron checkCookie() {
@@ -89,12 +95,22 @@
                 document.cookie = "fe_r_num=" + fe_r.num + ";path=/";
                 document.cookie = "ni_r_num=" + ni_r.num + ";path=/";
                 document.cookie = "cu_r_num=" + cu_r.num + ";path=/";
-                document.cookie = "pb_r_num="+pb_r.num+";path=/";
+                document.cookie = "pb_r_num=" + pb_r.num + ";path=/";
+                al_r_num_ = al_r_num_ - 500;
+                fe_r_num_ = fe_r_num_ - 100;
+                ni_r_num_ = ni_r_num_ - 50;
+                cu_r_num_ = cu_r_num_ - 50;
+                pb_r_num_ = pb_r_num_ - 50;
+                document.cookie = "al_r_num_=" + al_r_num_ + ";path=/";
+                document.cookie = "fe_r_num_=" + fe_r_num_ + ";path=/";
+                document.cookie = "ni_r_num_=" + ni_r_num_ + ";path=/";
+                document.cookie = "cu_r_num_=" + cu_r_num_ + ";path=/";
+                document.cookie = "pb_r_num_="+pb_r_num_+";path=/";
                 document.getElementById("num1").innerHTML = "你目前拥有" + cr_b.num + "个铬矿场";
                 document.getElementById("num2").innerHTML = "你目前20每秒生产" + cr_b.num + "个铬矿";
-                document.getElementById("warcrng").innerHTML = "";
+                document.getElementById("warning").innerHTML = "";
             } else {
-                document.getElementById("warcrng").innerHTML = "矿物储量不足";
+                document.getElementById("warning").innerHTML = "矿物储量不足";
             }
         }
     //动态生成第一个导航栏

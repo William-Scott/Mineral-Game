@@ -18,10 +18,16 @@
         <div>
             <div class="container-fluid">
 	            <div class="row-fluid">
-		            <div class="span12">
-			            <h3 class="text-center">
+                    <div class="span12">
+                        <h3 class="text-center">
 				            我家里有矿
 			            </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+		            <div class="span6">   
 			            <ul class="nav nav-tabs">
 				            <li class="active">
                                 <asp:LinkButton ID="LinkButton1" runat="server" PostBackUrl="ResourceAl.aspx">矿物</asp:LinkButton>
@@ -34,8 +40,38 @@
 				            </li>
 			            </ul>
                     </div>
-                  </div>
-               </div>
+                    <div class="span6">
+                        <div class="container-fluid">
+                            <div class="row-fluid">
+                                <div class="span2">
+                                    <p class="lead text-center">
+						                仓库
+					                </p>
+                                </div>
+                                <div class="span10">
+                                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CellPadding="10">
+                                        <Columns>
+                                            <asp:BoundField DataField="Al" HeaderText="Al" SortExpression="Al" />
+                                            <asp:BoundField DataField="Fe" HeaderText="Fe" SortExpression="Fe" />
+                                            <asp:BoundField DataField="Cu" HeaderText="Cu" SortExpression="Cu" />
+                                            <asp:BoundField DataField="Pb" HeaderText="Pb" SortExpression="Pb" />
+                                            <asp:BoundField DataField="Sn" HeaderText="Sn" SortExpression="Sn" />
+                                            <asp:BoundField DataField="Ti" HeaderText="Ti" SortExpression="Ti" />
+                                            <asp:BoundField DataField="Cr" HeaderText="Cr" SortExpression="Cr" />
+                                            <asp:BoundField DataField="Ni" HeaderText="Ni" SortExpression="Ni" />
+                                        </Columns>
+                                    </asp:GridView>
+                                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Player_infoConnectionString %>" SelectCommand="SELECT [Al], [Fe], [Cu], [Pb], [Sn], [Ti], [Cr], [Ni] FROM [Player_Resource] WHERE ([PlayerID] = @PlayerID)">
+                                        <SelectParameters>
+                                            <asp:CookieParameter CookieName="player_id" Name="PlayerID" Type="Int32" />
+                                        </SelectParameters>
+                                    </asp:SqlDataSource>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>

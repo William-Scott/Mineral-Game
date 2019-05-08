@@ -68,6 +68,12 @@
     sn_r.num = getCookie("sn_r_num");
 
     sn_b.num = getCookie("sn_b_num");
+
+    var al_r_num_ = 0;
+    var fe_r_num_ = 0;
+    var ti_r_num_ = 0;
+    var cr_r_num_ = 0;
+    var ni_r_num_ = 0;
     document.getElementById("num1").innerHTML = "你目前拥有" + sn_b.num + "个锡矿场";
     document.getElementById("num2").innerHTML = "你目前20每秒生产" + sn_b.num + "个锡矿";
         /*function checkCookie() {
@@ -89,7 +95,17 @@
                 document.cookie = "fe_r_num=" + fe_r.num + ";path=/";
                 document.cookie = "ti_r_num=" + ti_r.num + ";path=/";
                 document.cookie = "cr_r_num=" + cr_r.num + ";path=/";
-                document.cookie = "ni_r_num="+ni_r.num+";path=/";
+                document.cookie = "ni_r_num=" + ni_r.num + ";path=/";
+                al_r_num_ = al_r_num_ - 500;
+                fe_r_num_ = fe_r_num_ - 100;
+                ti_r_num_ = ti_r_num_ - 50;
+                cr_r_num_ = cr_r_num_ - 50;
+                ni_r_num_ = ni_r_num_ - 50;
+                document.cookie = "al_r_num_=" + al_r_num_ + ";path=/";
+                document.cookie = "fe_r_num_=" + fe_r_num_ + ";path=/";
+                document.cookie = "ti_r_num_=" + ti_r_num_ + ";path=/";
+                document.cookie = "cr_r_num_=" + cr_r_num_ + ";path=/";
+                document.cookie = "ni_r_num_="+ni_r_num_+";path=/";
                 document.getElementById("num1").innerHTML = "你目前拥有" + sn_b.num + "个锡矿场";
                 document.getElementById("num2").innerHTML = "你目前20每秒生产" + sn_b.num + "个锡矿";
                 document.getElementById("warning").innerHTML = "";
